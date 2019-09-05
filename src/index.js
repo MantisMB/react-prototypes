@@ -1,7 +1,32 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 
+
+
+function luckyNumber() {
+    return Math.floor((Math.random() * 1000) + 1)
+};
+
+const user = {
+    name: "Matthew",
+    luckyNumber: luckyNumber(),
+};
+
+function greeting(user) {
+    return (
+    <div className="container">
+        <h1>
+            {`Welcome,${user.name}`}
+        </h1>
+        <h2 className="text-muted">
+            {`Your lucky number is: ${user.luckyNumber}`}
+        </h2>
+    </div>)
+};
+
+const greet = greeting(user);
+
 ReactDOM.render(
-    <h1 className="container text-center">React Prototypes!</h1>,
-    document.getElementById('root')
+    greet,
+    document.getElementById('root'),    
 );

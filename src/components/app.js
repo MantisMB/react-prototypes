@@ -19,13 +19,13 @@ const students = [
     }
   ];
 
-  <Table data={students}/>
+  
 
 export default () => {
     return (
         <div className="container">
             <h1>Student Grade Table</h1>
-            <Table/>
+            <Table data={students}/>
         </div>
     )
 }
